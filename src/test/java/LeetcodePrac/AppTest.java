@@ -1,4 +1,4 @@
-package UdemyPrac;
+package LeetcodePrac;
 
 import static org.junit.Assert.assertTrue;
 
