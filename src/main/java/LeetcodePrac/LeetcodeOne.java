@@ -1,4 +1,4 @@
-package UdemyPrac;
+package LeetcodePrac;
 
 public class LeetcodeOne {
     public static void main(String[] args) {
