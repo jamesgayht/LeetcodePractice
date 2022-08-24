@@ -4,6 +4,6 @@ public class Main {
     
     public static void main(String[] args) {
 
-        System.out.println(LeetcodeNine.isPalindrome(0));
+        System.out.println(Leetcode13.romanToInt("MMCDXXV"));
     }
 }
