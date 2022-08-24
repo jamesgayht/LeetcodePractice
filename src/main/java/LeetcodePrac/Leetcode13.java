@@ -1,5 +1,7 @@
 package LeetcodePrac;
 
+import java.util.HashMap;
+
 public class Leetcode13 {
 
     public static int romanToInt(String s) {
@@ -21,36 +23,62 @@ public class Leetcode13 {
 
         int finalInt = 0;
 
+        HashMap<Character, Integer> hashMap = new HashMap<>();
+        hashMap.put('I', 1);
+        hashMap.put('V', 5);
+        hashMap.put('X', 10);
+        hashMap.put('L', 50);
+        hashMap.put('C', 100);
+        hashMap.put('D', 500);
+        hashMap.put('M', 1000);
+
+        for (int i = 0; i < s.length(); i++) {
+            if (i < s.length() - 1) {
+                if (hashMap.get(s.charAt(i)) < hashMap.get(s.charAt(i + 1))) {
+                    finalInt -= hashMap.get(s.charAt(i));
+                } else {
+                    finalInt += hashMap.get(s.charAt(i));
+                }
+            } else if (i == s.length() - 1) {
+                finalInt += hashMap.get(s.charAt(i));
+            }
+        }
+        return finalInt;
+    }
+
+    public static int romanToInt2(String s) {
+
+        int finalInt = 0;
+        
         char[] charArray = s.toCharArray();
 
         for (int i = 0; i < charArray.length; i++) {
 
-            if(i == charArray.length-1) {
+            if (i == charArray.length - 1) {
                 if (charArray[i] == 'I') {
-                        finalInt += 1; 
+                    finalInt += 1;
                 }
                 if (charArray[i] == 'X') {
-                        finalInt += 10; 
+                    finalInt += 10;
                 }
                 if (charArray[i] == 'C') {
-                        finalInt += 100; 
+                    finalInt += 100;
                 }
                 if (charArray[i] == 'V') {
-                        finalInt += 5; 
+                    finalInt += 5;
                 }
                 if (charArray[i] == 'L') {
-                        finalInt += 50; 
+                    finalInt += 50;
                 }
                 if (charArray[i] == 'D') {
-                        finalInt += 500; 
+                    finalInt += 500;
                 }
                 if (charArray[i] == 'M') {
-                        finalInt += 1000; 
+                    finalInt += 1000;
                 }
 
-
             } else if (charArray[i] == 'I') {
-                
+
                 if (charArray[i + 1] == 'V') {
                     finalInt += 4;
                     i++;
@@ -59,7 +87,7 @@ public class Leetcode13 {
                     i++;
                 } else {
                     finalInt += 1;
-                }  
+                }
 
             } else if (charArray[i] == 'X') {
 
@@ -71,7 +99,7 @@ public class Leetcode13 {
                     i++;
                 } else {
                     finalInt += 10;
-                } 
+                }
 
             } else if (charArray[i] == 'C') {
 
