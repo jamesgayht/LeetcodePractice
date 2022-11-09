@@ -25,7 +25,7 @@ public class Leetcode20 {
             } else { //checking for open brackets
                 linkedList.add(c);
             }
-        }
+    }
         if (linkedList.isEmpty()) {
             result = true;
             return result;
