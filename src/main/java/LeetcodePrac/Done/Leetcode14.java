@@ -1,4 +1,4 @@
-package LeetcodePrac;
+package LeetcodePrac.Done;
 
 public class Leetcode14 {
 
