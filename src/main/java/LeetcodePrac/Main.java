@@ -1,13 +1,12 @@
 package LeetcodePrac;
 
-import LeetcodePrac.Done.LeetCode125;
-
 public class Main {
 
     public static void main(String[] args) {
-        String s = " ";
-        // String s = "A man, a plan, a canal: Panama";
-        System.out.println(LeetCode125.isPalindrome(s));
-
+        // int[] numbers = {0,0,3,4};
+        int[] numbers = {1,2,3,4,4,9,56,90};
+        int target = 8;
+        System.out.println(Leetcode167.twoSum(numbers, target));
+    
     }
 }
