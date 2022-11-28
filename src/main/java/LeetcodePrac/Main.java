@@ -1,11 +1,10 @@
 package LeetcodePrac;
 
-import LeetcodePrac.CodeWarsKata.KataSumOfOddNumbers;
+import LeetcodePrac.CodeWarsKata.KataStringEndsWith;
 
 public class Main {
 
     public static void main(String[] args) {
-        int n = 42; 
-        System.out.println(KataSumOfOddNumbers.rowSumOddNumbers(n));
+        System.out.println(KataStringEndsWith.solution("abc", "bc"));
     }
 }
